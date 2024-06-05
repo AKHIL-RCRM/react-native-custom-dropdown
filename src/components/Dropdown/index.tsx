@@ -153,9 +153,10 @@ const DropdownComponent: <T>(
 
     const eventOpen = () => {
       if (!disable) {
-        setVisible(true);
         if (onFocus) {
           onFocus();
+        } else {
+          setVisible(true);
         }
 
         if (searchText.length > 0) {
@@ -167,9 +168,10 @@ const DropdownComponent: <T>(
 
     const eventClose = useCallback(() => {
       if (!disable) {
-        setVisible(false);
         if (onBlur) {
           onBlur();
+        } else {
+          setVisible(false);
         }
       }
     }, [disable, onBlur]);
