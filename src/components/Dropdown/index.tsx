@@ -442,18 +442,6 @@ const DropdownComponent: <T>(
                 ? _.get(currentValue, labelField)
                 : placeholder}
             </Text>
-            {renderRightIcon ? (
-              renderRightIcon(visible)
-            ) : (
-              <Image
-                source={ic_down}
-                style={StyleSheet.flatten([
-                  styles.icon,
-                  { tintColor: iconColor },
-                  iconStyle,
-                ])}
-              />
-            )}
           </View>
         </TouchableWithoutFeedback>
       );
