@@ -298,17 +298,21 @@ const DropdownComponent: <T>(
         }
 
         _measure();
-        setVisible(!visible);
+        
         const filterData = excludeData(data);
         setListData(filterData);
 
         if (!visible) {
           if (onFocus) {
             onFocus();
+          } else {
+            setVisible(!visible);
           }
         } else {
           if (onBlur) {
             onBlur();
+          } else {
+            setVisible(!visible);
           }
         }
         if (searchText.length > 0) {
