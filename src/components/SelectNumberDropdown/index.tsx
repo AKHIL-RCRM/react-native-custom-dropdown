@@ -21,6 +21,7 @@ const SelectCountryComponent: <T>(
       value,
       valueField,
       labelField,
+      dropdownField,
       imageField,
       selectedTextStyle,
       imageStyle,
@@ -43,7 +44,7 @@ const SelectCountryComponent: <T>(
       return (
         <View style={styles.item}>
           <Text style={[styles.selectedTextStyle, selectedTextStyle]}>
-            {item[labelField]}
+            {item[dropdownField]}
           </Text>
           {value === item[valueField] && <Image
             source={ic_check}
